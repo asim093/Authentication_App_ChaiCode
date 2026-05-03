@@ -75,7 +75,7 @@ const API_BASE = '/api/v1/users';
     }
   };
 
-  const register = async (username, email, password, role = 'admin') => {
+  const register = async (username, email, password, role = 'USER') => {
     setLoading(true);
     setMessage({ type: '', text: '' });
     try {
