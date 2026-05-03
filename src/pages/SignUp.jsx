@@ -17,8 +17,8 @@ const SignUp = () => {
             return;
         }
         const role = "admin";
-        await register(username, email, password, role)
-        if (message.type === 'success') {
+        const success = await register(username, email, password, role)
+        if (success) {
             navigate('/profile')
         }
     }

@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
 
-  const API_BASE = '/api/v1/users';
+  const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api/v1/users';
 
   const getCurrentUser = async () => {
     try {
